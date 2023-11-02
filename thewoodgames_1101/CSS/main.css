@@ -46,10 +46,19 @@ html {
     margin-bottom: 20px;
     /* background-color: aqua; */
   }
+  .main>nav>ul{
+    display: flex;
+  }
   .main>nav>ul>li{
-    display: inline-block;
+
+    /* 使用Display inline-block 排版 */
+    /* display: inline-block;
     width: 33.33%;
-    margin-right: -4px;
+    margin-right: -4px; */
+
+    /* 使用Display flex 排版 */
+    flex: 1;
+
     height: 70px;
     text-align: center;
     line-height: 70px;
