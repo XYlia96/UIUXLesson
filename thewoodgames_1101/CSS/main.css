@@ -12,14 +12,16 @@ html {
     box-sizing: inherit;
 }
 
-ul {
+  ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
   .main{
-    width: 980px;
+    width: 100%;
+    max-width: 980px;
     margin: 0 auto;
+    padding: 0 16px;
     /* background-color: blanchedalmond; */
   }
   .main>header{
@@ -27,6 +29,12 @@ ul {
     /* padding-top: 40px;
     padding-bottom: 20px; */
   }
+  /* #First{
+    background-color: aquamarine;
+  }
+  .main{
+    background-color: antiquewhite!important;
+  } */
   .main>header>img.logo{
     width: 150px;
     margin-top: 40px;
@@ -40,17 +48,48 @@ ul {
   }
   .main>nav>ul>li{
     display: inline-block;
-    width: 33%;
+    width: 33.33%;
+    margin-right: -4px;
     height: 70px;
     text-align: center;
     line-height: 70px;
     font-size: 24px;
     font-weight: bolder;
   }
-  .cn_text{
-    color: black;
-  }
   .en_text{
     color: #8a8000;
   }
-  
+  .main>.content>img{
+    width: 100%;
+  }
+  .main>nav>ul>li>.nav_item{
+    text-decoration: none;
+    color: #000;
+    display: block;
+    position: relative;
+  }
+  .main>nav>ul>li>.nav_item:hover{
+    background-color: #dcdddd;
+  }
+  .main>nav>ul>li>.nav_item>.nav_child{
+    background-color: #8a8000;
+    width: 100%;
+    display: none;
+    position: absolute;
+    text-align: left;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .main>nav>ul>li>.nav_item:hover .nav_child{
+    display: block;
+  }
+  .main>nav>ul>li>.nav_item .nav_child>a{
+    display: block;
+    line-height: 20px;
+    padding: 28px;
+    color: #fff;
+    text-decoration: none;
+  }
+  .main>nav>ul>li>.nav_item .nav_child>a:hover{
+    background-color: #000; 
+  }

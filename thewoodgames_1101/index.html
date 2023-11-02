@@ -8,23 +8,33 @@
     <link rel="stylesheet" href="CSS/main.css">
 </head>
 <body>
-    <div class="main">
+    <div id="First" class="main">
         <header>
             <img class="logo" src="img/logo.png" alt="">
         </header>
         <nav>
             <ul>
                 <li>
-                    <span class="cn_text">介紹</span>
-                    <span class="en_text">About</span>
+                    <a class="nav_item" href="about.html">
+                        <span>介紹</span>
+                        <span class="en_text">About</span>
+                    </a>
                 </li>
                 <li>
-                    <span class="cn_text">遊戲</span>
-                    <span class="en_text">Games</span>
+                    <div class="nav_item">
+                        <span>遊戲</span>
+                        <span class="en_text">Games</span>
+                        <div class="nav_child">
+                            <a href="#">萬貓的慶典<br>Festival of Thousand Cats</a>
+                            <a href="#">福爾摩斯大對決<br>Holmes : Sherlock & Mycroft</a>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <span class="cn_text">商店</span>
-                    <span class="en_text">Shop</span>
+                    <a class="nav_item" href="shop.html">
+                        <span>商店</span>
+                        <span class="en_text">Shop</span>
+                    </a>
                 </li>
             </ul>
         </nav>
