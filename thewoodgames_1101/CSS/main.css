@@ -35,7 +35,7 @@ html {
   .main{
     background-color: antiquewhite!important;
   } */
-  .main>header>img.logo{
+  .main>header img.logo{
     width: 150px;
     margin-top: 40px;
     margin-bottom: 20px;
@@ -103,9 +103,92 @@ html {
     background-color: #000; 
   }
 
+  footer{
+    background-color: #8a8000;
+    margin: 40px auto auto auto;
+    padding: 20px;
+    text-align: center;
+  }
+  footer>div{
+    max-width: 980px;
+    width: 100%;
+  }
+  footer>div ul{
+    display: inline-block;
+  }
+
+
+
+/* shop的CSS */
+  .main>.shop_content>.p_content{
+    color: #585958;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .shop_content>.item_wrap{
+    border: 2px solid #8a8000;
+    font-weight: bold;
+  }
+  .shop_content>.item_wrap>.item_row{
+    background-color: antiquewhite;
+    display: flex;
+    padding: 15px;
+  }
+  .shop_content>.item_wrap>.item_row>div{
+    flex: 1;
+  }
+  .shop_content>.item_wrap>.item_row>.item_right .item_title{
+    border-bottom: 1px solid #8a8000;
+    padding-bottom: 3px;
+  }
+  .shop_content>.item_wrap>.item_row>.item_right .item_child{
+    display: flex;
+    margin-top: 10px;
+  }
+  .price_txt{
+    color: #8a8000;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  .game_txt{
+    line-height: 20px;
+    font-size: 14px;
+  }
+  .buy_btn{
+    margin-left: 80px;
+    text-decoration: none;
+    background-color: #8a8000;
+    color: #fff;
+    width: 80px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    display: block;
+    border-radius: 16px;
+    font-size: 14px;
+  }
+  .buy_btn:hover{
+    background-color: #000;
+  }
+
+
+
+
+
+
+
 
   @media(max-width:992px){
-    .main>nav>ul>li{
-      width: 100%;
+    .main>nav>ul{
+      flex-direction: column;
     }
+    .main>nav>ul>li>.nav_item:hover .nav_child{
+      display: none;
+    }
+    /* .main>nav>ul>li{
+      width: 100%;
+    } */
+
   }
