@@ -133,7 +133,7 @@ html {
     font-weight: bold;
   }
   .shop_content>.item_wrap>.item_row{
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     display: flex;
     padding: 15px;
     border-bottom: 1px solid #8a8000;
