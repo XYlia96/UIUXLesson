@@ -53,7 +53,7 @@ html {
 
     /* 使用Display inline-block 排版 */
     /* display: inline-block;
-    width: 33.33%;
+    width: 30%;
     margin-right: -4px; */
 
     /* 使用Display flex 排版 */
@@ -112,6 +112,7 @@ html {
   footer>div{
     max-width: 980px;
     width: 100%;
+    text-align: center;
   }
   footer>div ul{
     display: inline-block;
@@ -128,16 +129,45 @@ html {
     font-weight: bold;
   }
   .shop_content>.item_wrap{
-    border: 2px solid #8a8000;
+    border: 1px solid #8a8000;
     font-weight: bold;
   }
   .shop_content>.item_wrap>.item_row{
     background-color: antiquewhite;
     display: flex;
     padding: 15px;
+    border-bottom: 1px solid #8a8000;
   }
-  .shop_content>.item_wrap>.item_row>div{
-    flex: 1;
+  .shop_content>.item_wrap>.item_row>.item_left{
+    width: 20%;
+  }
+  .product_img{
+    width: 100%;
+  }
+  .shop_content>.item_wrap>.item_row>.item_mid{
+    width: 40%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* position: relative; */
+  }
+  .item_mid>h2{
+    margin: 0;
+    font-size: 22px;
+    line-height: 25px;
+  }
+  .item_mid>span{
+    margin-top: auto;
+    margin-bottom: 10px;
+
+    /* position: absolute;
+    bottom: 10px; */
+    color: #8a8000;
+    font-weight: bold;
+  }
+  .shop_content>.item_wrap>.item_row>.item_right{
+    width: 40%;
   }
   .shop_content>.item_wrap>.item_row>.item_right .item_title{
     border-bottom: 1px solid #8a8000;
@@ -146,6 +176,9 @@ html {
   .shop_content>.item_wrap>.item_row>.item_right .item_child{
     display: flex;
     margin-top: 10px;
+  }
+  .item_child>.item_child_right{
+    margin-left: auto;
   }
   .price_txt{
     color: #8a8000;
@@ -157,7 +190,7 @@ html {
     font-size: 14px;
   }
   .buy_btn{
-    margin-left: 80px;
+    margin-left: 70px;
     text-decoration: none;
     background-color: #8a8000;
     color: #fff;
