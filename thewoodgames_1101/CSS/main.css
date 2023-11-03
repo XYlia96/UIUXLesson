@@ -103,20 +103,8 @@ html {
     background-color: #000; 
   }
 
-  footer{
-    background-color: #8a8000;
-    margin: 40px auto auto auto;
-    padding: 20px;
-    text-align: center;
-  }
-  footer>div{
-    max-width: 980px;
-    width: 100%;
-    text-align: center;
-  }
-  footer>div ul{
-    display: inline-block;
-  }
+  
+  
 
 
 
@@ -135,8 +123,12 @@ html {
   .shop_content>.item_wrap>.item_row{
     /* background-color: antiquewhite; */
     display: flex;
+    gap: 15px;
     padding: 15px;
     border-bottom: 1px solid #8a8000;
+  }
+  .shop_content>.item_wrap>.item_row:last-child{
+    border-bottom: none;
   }
   .shop_content>.item_wrap>.item_row>.item_left{
     width: 20%;
@@ -146,7 +138,6 @@ html {
   }
   .shop_content>.item_wrap>.item_row>.item_mid{
     width: 40%;
-    padding: 0 15px;
     display: flex;
     flex-direction: column;
     /* justify-content: space-between; */
@@ -175,11 +166,12 @@ html {
   }
   .shop_content>.item_wrap>.item_row>.item_right .item_child{
     display: flex;
+    justify-content: space-between;
     margin-top: 10px;
   }
-  .item_child>.item_child_right{
-    margin-left: auto;
-  }
+  /* .item_child>.item_child_right{
+    margin-left: auto;    
+  } */
   .price_txt{
     color: #8a8000;
     font-size: 16px;
@@ -209,6 +201,78 @@ html {
 
 
 
+  footer{
+    background-color: #8a8000;
+    margin-top: 30px;
+      
+  }
+
+
+
+  /* footer對其方式1 */
+  footer>.main{
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 135px; */
+    color: #fff;
+    font-weight: bolder;
+  }
+
+  /* footer對齊方式2 */
+  /* footer>.main{
+    display: flex;
+    height: 135px;
+    padding-top: 20px;
+  }
+  footer>.main>ul{
+    flex: 1;
+    display: flex;
+    gap: 30px;
+  } */
+
+  /* footer對齊方式3 */
+  footer>.main{
+    display: flex;
+    height: 135px;
+    padding-top: 20px;
+  }
+  footer>.main>ul{
+    flex: 1;
+    display: flex;
+    margin-right: auto;
+    gap: 30px;
+  }
+
+  /* footer對齊方式4 */
+  /* footer>.main{
+    height: 135px;
+    background-color: #8a8000;
+  }
+  footer>.main>ul{
+    float: left;
+  }
+  footer>.main>div{
+    float: right;
+  } */
+
+
+  footer>.main>ul>li a{
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 4px;
+  }
+  footer>.main>ul>li a:hover{
+    /* 01 */
+    /* text-decoration: underline; */
+
+    /* 02 */
+    border-bottom: 1px solid #fff;
+  }
+
+
+
+
 
 
 
@@ -223,5 +287,16 @@ html {
     /* .main>nav>ul>li{
       width: 100%;
     } */
-
+    .shop_content>.item_wrap>.item_row{
+      flex-direction: column;
+    }
+    .shop_content>.item_wrap>.item_row>.item_left{
+      width: 100%;
+    }
+    .shop_content>.item_wrap>.item_row>.item_mid{
+      width: 100%;
+    }
+    .shop_content>.item_wrap>.item_row>.item_right{
+      width: 100%;
+    }
   }
