@@ -8,7 +8,26 @@
     <link rel="stylesheet" href="scss/main.scss">
 </head>
 <body>
-    <h1>哈</h1>
+    <header class="flex bg-[#f6f6f6] justify-between items-center h-[70px] px-[55px] font-bold">
+      <a class="flex items-center gap-[10px]" href="#">
+        <img class="h-[32px]" src="img/logo-teaching.png" alt="">
+        <div class="logo_text">線上開課工具!</div>
+      </a>
+      <nav class="absolute bg-[#f6f6f6] top-[70px] w-full left-0 text-center lg:relative lg:top-0 lg:w-auto">
+        <ul class="flex flex-col gap-[15px] lg:flex-row lg:gap-[40px]">
+          <li><a class="hover:text-[#007cc1] duration-300 block py-[10px]" href="#">線上開課工具</a></li>
+          <li><a class="hover:text-[#007cc1] duration-300 block py-[10px]" href="#">功能特色</a></li>
+          <li><a class="hover:text-[#007cc1] duration-300 block py-[10px]" href="#">方案費用</a></li>
+          <li><a class="hover:text-[#007cc1] duration-300 block py-[10px]" href="#">客戶案例</a></li>
+          <li><a class="hover:text-[#007cc1] duration-300 block py-[10px]" href="#">關於我們</a></li>
+          <li><a class="hover:text-[#007cc1] duration-300 block py-[10px]" href="#">藍猴首頁</a></li>
+        </ul>
+      </nav>
+      <a class="hidden lg:block text-[#333] tracking-[0.2em] border-2 border-[#f7b157] rounded-full px-[20px] py-[10px] hover:bg-gradient-to-br from-[#f6d365] to-[#fda085] duration-500 hover:text-[#fff]" href="#">
+        FREE! 免費開通試用
+      </a>
+      <img class="lg:hidden" src="img/icon_bars.svg" alt="">
+    </header>
 
 </body>
 </html>

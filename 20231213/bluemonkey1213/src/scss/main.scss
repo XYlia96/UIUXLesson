@@ -4,6 +4,15 @@
 
 @layer utilities {}
 
-body{
-    background-color: rgb(255, 206, 160);
+.logo_text{
+    border: 1px solid #727272;
+    font-size: 15px;
+    font-weight: bold;
+    color: #727272;
+    padding: 2px 8px;
+    background-color: #fff;
+    &:hover{
+        background-color: burlywood;
+        color: #fff;
+    }
 }
