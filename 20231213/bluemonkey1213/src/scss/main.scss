@@ -75,6 +75,114 @@
     }
 }
 
+
+
+.yellow_line{
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+    &::before{
+        content: "";
+        width: 100%;
+        height: 10px;
+        background-color: #ffee5a;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+    }
+    
+}
+
+.input_group{
+    position: relative;
+    &.phone::before{
+        content: "";
+        width: 20px;
+        height: 20px;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 10px;
+        background-image: url(https://cdn-icons-png.flaticon.com/512/159/159832.png);
+        background-size: 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    input{
+        background-color: #f6f8fb;
+        border: 1px solid #000;
+        width: 100%;
+        padding: 10px 24px;
+        font-size: 20px;
+        font-weight: bold;
+        &:focus{
+            outline: none;
+            border: 1px solid #1b96e1;
+            background-color: white;
+            box-shadow: 0 0 0 1.5px #1b96e1;
+            
+        }
+    }
+    
+}
+
+textarea{
+    background-color: #f6f8fb;
+        border: 1px solid #000;
+        width: 100%;
+        padding: 10px 24px;
+        font-size: 20px;
+        font-weight: bold;
+        &:focus{
+            outline: none;
+            border: 1px solid #1b96e1;
+            background-color: white;
+            box-shadow: 0 0 0 1.5px #1b96e1;
+            
+        }
+}
+
+.input_choose{
+    input{
+        display: none;
+    }
+    label{
+        font-size: 22px;
+        padding: 10px 13px;
+        cursor: pointer;
+        &:hover{
+            background-color: #f5f8fc;
+            border-radius: 30px;
+        }
+        &::before{
+            content: "";
+            display: inline-block;
+            width: 23px;
+            height: 23px;
+            background-color: #fff;
+            border-radius: 100%;
+            border: 2px solid #777;
+            vertical-align: middle;
+            margin-right: 5px;
+            position: relative;
+            top: -3px;
+        }
+    }
+    input:checked + label{
+        background-color: #efefef;
+        border-radius: 30px;
+        animation: ease-in;
+        &::before{
+            border: 7px solid #1b96e1;
+        }
+        
+    }
+}
+
+
+
+
 @media (min-width: 1024px){
     #offcanvas-flip{
         display: block;
