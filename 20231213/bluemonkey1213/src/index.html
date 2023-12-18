@@ -8,21 +8,22 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/css/uikit.min.css" />
     <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="scss/main.scss">
 </head>
+<%-include("include/ga")%>
 <body>
   <%-include("include/headerV1")%>
   <main>
-    <section class="bg-[#1b96e1] pb-[28px]">
+    <section id="scroll_1" class="bg-[#1b96e1] pb-[28px]">
       <div class="mx-auto max-w-[1300px] text-center">
         <img class="lg:hidden" src="https://firebasestorage.googleapis.com/v0/b/school-uiui.appspot.com/o/web%2F1685730760.png?alt=media&token=b635118a-c808-405e-ba03-b37a60089541" alt="">
         <img class="hidden lg:block" src="img/3bm-fb-share.jpg" alt="">
-        <button class="plan_btn animate__animated animate__swing animate__infinite infinite">查看方案</button>
+        <button class="plan_btn animate__animated animate__swing animate__infinite infinite ">查看方案</button>
       </div>
     </section>
-    <section class="bg-[#f6f8fd]">
+    <section id="scroll_2" class="bg-[#f6f8fd]">
       <div class="mx-auto max-w-[1300px] text-center">
         <div class="flex pt-10 pb-16">
           <div class="flex-1">
@@ -63,9 +64,33 @@
         </div>
       </div>
     </section>
-    <section class="bg-[#1193e1]">
+    <section id="scroll_3" class="bg-[#1193e1]">
       <div class="mx-auto max-w-[1500px] text-center px-5">
         <h2 class="py-10 text-[25px] lg:text-[70px] text-white font-bold">各品牌好評見證</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-2">
+          <%for(var i=0;i<4;i++){%>
+            <div class="bg-[#f5f8fc] rounded-xl overflow-hidden">
+              <div class="bg-[#ffde25] font-bold text-[18px] py-2 px-[22px]">美甲美妝業</div>
+              <div style="aspect-ratio: 3/1" class="zoom overflow-hidden relative">
+                <a class="inner w-full h-full block" href="#">
+                  <img class="w-full h-full object-cover" src="https://ik.imagekit.io/thecodingpro/mike-school/tr:w-800,c-at_max/o/web%2F1698985575.aaaaaa?alt=media&token=e33f7a07-2d5e-49dc-b6af-eedc3e9a3952" alt="">
+                </a>
+                <a class="bg-[#ff9b58] text-[#fff] absolute top-0 left-0" href="#">募資優惠</a>
+              </div>
+              <div class="pt-4">
+                <a class="text-[14px] underline text-[#6c757d] hover:no-underline hover:text-[#6c757d]" href="#">no15class.com/</a>
+                <p class="text-[20px] font-bold px-9 py-4 text-left">與藍猴平台的溝通非常順暢，使用前清楚講解說明，使用後遇到問題快速協助，後台操作直觀容易理解，也持續擴增新功能，值得推薦!!</p>
+                <div class="flex px-9 pb-4 items-center gap-2">
+                  <img class="rounded-full w-10" src="img/thead12.png" alt="">
+                  <span>- 十五號藝術事業</span>
+                </div>
+              </div>
+            </div>
+          <%}%>
+        </div>
+
+
         <div class="relative" uk-slider="autoplay: true;autoplay-interval: 1000">
           <div class="flex uk-slider-items w-[150px] lg:[200px]">
             <div><img src="img/teacher-slide/acdc.png" alt=""></div>
@@ -83,14 +108,14 @@
 
       </div>
     </section>
-    <section class="bg-[#f6f8fd]">
+    <section id="scroll_4" class="bg-[#f6f8fd]">
       <div class="mx-auto max-w-[1000px] text-center py-5 px-[15px] lg:px-5">
-        <div class="shadow-md bg-white rounded-md px-5 py-[30px]">
+        <div class="shadow-md bg-white rounded-xl px-5 py-[30px]">
           <div class="text-left mb-5">
             <h2 class="text-[#1b96e1] text-[48px] font-bold">你的線上教學事業 <b class="text-black">馬上啟動！</b></h2>
             <p class="text-[22px]">歡迎加入 LINE，即時展開對話，或是填寫下方表單，我們將致電與您討論：）</p>
           </div>
-          <div class="flex flex-col lg:flex-row">
+          <div class="flex flex-col lg:flex-row gap-10">
             <div class="flex-1 basis-3/5">
               <form class="flex flex-col gap-5" action="">
                 <div class="input_group">
@@ -133,7 +158,7 @@
               </form>
             </div>
             <div class="flex-1 flex basis-2/5 justify-center items-end w-full">
-              <button class="bg-[#1b96e1] py-2 px-5 text-[22px] text-white font-bold rounded-full w-full">
+              <button class="bg-[#1b96e1] py-2 px-5 text-[22px] text-white font-bold rounded-full w-full hover:bg-[#089ff5] hover:scale-[101%] hover:ease-in-out duration-200">
                 送出
               </button>
             </div>
@@ -141,6 +166,15 @@
         </div>
       </div>
     </section>
+
+    <div class="toggle w-[100px] h-[100px] fixed right-10 bottom-10">
+      <!-- <a href="#" uk-totop uk-scroll>置頂</a>
+      <a href="#scroll_2" uk-scroll>移動到某個元素</a> -->
+      <button uk-toggle="target: .toggle" class="txtJL">close</button>
+      <img src="https://firebasestorage.googleapis.com/v0/b/school-uiui.appspot.com/o/web%2F1677935316.png?alt=media&token=d9c2656d-da00-4e81-ba21-379793cbcac3" alt="">
+    </div>
+
+    <p uk-toggle="target: .toggle" class="toggle w-[20px] h-[100px] fixed right-2 bottom-0 bg-[#f6f8fd] text-[#1b96e1]" hidden href="#">更多方案</p>
 
 
 
@@ -150,7 +184,7 @@
   
    
     <!-- UIkit JS -->
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit-icons.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit-icons.min.js"></script>
 </body>
 </html>
